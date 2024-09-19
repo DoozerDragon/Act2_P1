@@ -1,0 +1,105 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos de las secciones */
+section {
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(255, 0, 0, 1);
+    padding: 50px;
+    width: 350px;
+    display: none; /* Se ocultan inicialmente */
+    opacity: 1;
+    transition: transform 0.8s, opacity 0.8s;
+    transform-style: preserve-3d;
+    margin: 50px;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #005eff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0095ff;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0f3c65;
+}
+
+/* Estilo de la tarjeta final */
+#finalMensaje, #finalNombre, #finalPuesto {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Media query para hacer el diseño responsive */
+@media screen and (max-width: 400px) {
+    section {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+/* Animaciones de transición */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.rotate-out {
+    transform: rotateX(360deg); /* Gira la tarjeta hacia afuera */
+    opacity: 0; /* Desaparece la tarjeta */
+    transition: transform 0.8s ease, opacity 0.8s ease; /* Añadimos la transición */
+}
+
+.rotate-in {
+    transform: rotateX(360deg); /* Aparece con un giro desde 90 grados */
+    opacity: 1; /* Aparece la tarjeta */
+    transition: transform 0.8s ease, opacity 0.8s ease; /* Añadimos la transición */
+}
+
+.rotate-in-hidden {
+    transform: rotateX(0); /* Empieza desde una rotación de -90 grados */
+    opacity: 0; /* Empieza invisible */
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Formulario Interactivo Profesional</title>
+</head>
+<body>
+
+    <!-- Tarjeta inicial para el mensaje -->
+    <section id="tarjeta" class="visible">
+        <h1>Tarjeta de presentación</h1>
+        <label for="Mensaje">Mensaje:</label>
+        <input type="text" id="mensaje" placeholder="Ingresar mensaje de presentación">
+        <button onclick="enviarMensaje()">Enviar</button>
+    </section>
+
+    <!-- Formulario para los datos personales -->
+    <section id="datos_Personales" class="hidden">
+        <h1>Datos personales</h1>
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" placeholder="Ingresar nombre completo">
+        <label for="Puesto">Puesto:</label>
+        <input type="text" id="Puesto" placeholder="Ingresar puesto solicitado">
+        <button onclick="enviarDatos()">Enviar</button>
+    </section>
+
+    <!-- Tarjeta final con los datos completos -->
+    <section id="datos_Completos" class="visible">
+        <h1>Tarjeta final</h1>
+        <p id="finalMensaje"></p>
+        <p id="finalNombre"></p>
+        <p id="finalPuesto"></p>
+    </section>
+
+</body>
+</html>
